@@ -1,0 +1,12 @@
+<h1>Invoices</h1>
+
+<ul>
+  <li *ngFor="let invoice of invoices$">
+    <a routerLink="/invoiceDetails/{{invoice.ID}}">{{ invoice.ID }}</a>
+
+    <ul>
+      <li>Discount : {{ invoice.Discount }}</li>
+      <li>Date : {{ invoice.InvoiceDate }}</li>
+    </ul>
+  </li>
+</ul>

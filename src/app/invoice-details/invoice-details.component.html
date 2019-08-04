@@ -1,0 +1,15 @@
+<h1>Invoice {{ invoice$.ID }}</h1>
+
+<ul>
+  <li><strong>Date :</strong> {{ invoice$.InvoiceDate }}</li>
+  <li><strong>Total :</strong> {{ invoice$.GrossTotal }}</li>
+  <li><strong>Discount :</strong> {{ invoice$.Discount }}%</li>
+  <li><strong>Grand Total:</strong> {{ invoice$.GrandTotal }}</li>
+</ul>
+
+<h2>Items</h2>
+<hr>
+
+<ul>
+  <li *ngFor="let item of invoice$.Items"> {{item.Name}} @ {{item.Price}} </li>
+</ul>
